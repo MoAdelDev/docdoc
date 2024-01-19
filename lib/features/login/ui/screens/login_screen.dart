@@ -1,7 +1,7 @@
 import 'package:docdoc/core/helpers/spacing.dart';
+import 'package:docdoc/features/login/ui/widgets/login_button_and_listener.dart';
 import 'package:docdoc/features/login/ui/widgets/login_email_and_password.dart';
 import 'package:docdoc/features/login/ui/widgets/register_question_text.dart';
-import 'package:docdoc/features/login/ui/widgets/login_button.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:docdoc/features/login/ui/widgets/welcome_back_text.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               verticalSpace(40.0),
               const LoginEmailAndPassword(),
               verticalSpace(20.0),
-              const LoginButton(),
+              const LoginButtonAndListener(),
               verticalSpace(40.0),
               const TermsAndConditionsText(),
               verticalSpace(20.0),

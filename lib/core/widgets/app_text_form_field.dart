@@ -31,6 +31,7 @@ class AppTextFormFiled extends StatelessWidget {
     return TextFormField(
       controller: controller,
       keyboardType: keyboardType,
+      cursorColor: AppColor.primary,
       decoration: InputDecoration(
         isDense: true,
         contentPadding:
@@ -48,7 +49,7 @@ class AppTextFormFiled extends StatelessWidget {
           onPressed: onSuffixIcon,
           icon: Icon(
             suffixIcon,
-            color: AppColor.grayColor,
+            color: AppColor.gray,
           ),
         ),
         border: OutlineInputBorder(

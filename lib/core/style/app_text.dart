@@ -7,7 +7,7 @@ class AppText {
   static TextStyle get text10GrayRegular => TextStyle(
         fontSize: 10.sp,
         fontWeight: FontWeightHelper.regular,
-        color: AppColor.grayColor,
+        color: AppColor.gray,
       );
 
   static TextStyle get textButton16WhiteSemiBold => TextStyle(
@@ -19,41 +19,41 @@ class AppText {
   static TextStyle get text32PrimaryBold => TextStyle(
         fontSize: 32.sp,
         fontWeight: FontWeightHelper.bold,
-        color: AppColor.primaryColor,
+        color: AppColor.primary,
       );
 
   static TextStyle get text13DarkBlueRegular => TextStyle(
         fontSize: 13.sp,
         fontWeight: FontWeightHelper.bold,
-        color: Colors.blue,
+        color: AppColor.darkBlue,
       );
   static TextStyle get text24BlackBold => TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeightHelper.bold,
-        color: AppColor.blackColor,
+        color: AppColor.black,
       );
 
   static TextStyle get text24PrimaryBold => TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeightHelper.bold,
-        color: AppColor.primaryColor,
+        color: AppColor.primary,
       );
 
   static TextStyle get text12PrimaryRegular => TextStyle(
         fontSize: 12.sp,
         fontWeight: FontWeightHelper.regular,
-        color: AppColor.primaryColor,
+        color: AppColor.primary,
       );
 
   static TextStyle get text14GrayRegular => TextStyle(
         fontSize: 14.sp,
         fontWeight: FontWeightHelper.regular,
-        color: AppColor.grayColor,
+        color: AppColor.gray,
       );
 
   static TextStyle get text12BlackRegular => TextStyle(
         fontSize: 12.sp,
         fontWeight: FontWeightHelper.regular,
-        color: AppColor.blackColor,
+        color: AppColor.black,
       );
 }

@@ -1,17 +1,7 @@
 # docdoc
 
-A new Flutter project.
+This is flutter project app, it helps the user to take appointment at doctors.
 
-## Getting Started
+🎨: System Design
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# docdoc
+![Untitled Diagram drawio](https://github.com/MoAdelDev/docdoc/assets/57016916/5509e385-a170-45de-8ae2-5ebb8b636356)

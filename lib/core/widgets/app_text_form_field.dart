@@ -11,8 +11,7 @@ class AppTextFormFiled extends StatelessWidget {
   final bool obscureText;
   final IconData? suffixIcon;
   final VoidCallback? onSuffixIcon;
-  final String errorMsg;
-  final String? Function(String?)? validator;
+  final Function(String?) validator;
 
   const AppTextFormFiled({
     super.key,
@@ -24,8 +23,7 @@ class AppTextFormFiled extends StatelessWidget {
     this.obscureText = false,
     this.suffixIcon,
     this.onSuffixIcon,
-    this.errorMsg = '',
-    this.validator,
+    required this.validator,
   });
 
   @override
@@ -36,7 +34,7 @@ class AppTextFormFiled extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         contentPadding:
-            EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 18.0.h),
+            EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 15.0.h),
         hintText: hintText,
         hintStyle: TextStyle(
           color: const Color(0xFFC2C2C2),
@@ -74,13 +72,9 @@ class AppTextFormFiled extends StatelessWidget {
           ),
         ),
       ),
-      validator: validator ??
-          (value) {
-            if (value == null || value.isEmpty) {
-              return errorMsg;
-            }
-            return null;
-          },
+      validator: (value) {
+        return validator(value);
+      },
       style: TextStyle(
         fontSize: 14.0.sp,
         fontWeight: FontWeight.w500,

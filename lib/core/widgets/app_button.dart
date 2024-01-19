@@ -15,7 +15,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52.h,
+      height: 45.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,

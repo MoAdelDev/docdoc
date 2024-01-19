@@ -1,5 +1,6 @@
 import 'package:docdoc/core/style/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppButton extends StatelessWidget {
   final String buttonText;
@@ -14,11 +15,11 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52,
+      height: 52.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
-        borderRadius: BorderRadius.circular(16.0),
+        borderRadius: BorderRadius.circular(16.0.r),
       ),
       clipBehavior: Clip.antiAlias,
       child: MaterialButton(

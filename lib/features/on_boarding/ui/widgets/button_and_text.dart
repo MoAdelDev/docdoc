@@ -1,4 +1,6 @@
+import 'package:docdoc/core/helpers/extensions.dart';
 import 'package:docdoc/core/helpers/spacing.dart';
+import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/style/app_text.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class ButtonAndText extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10.0),
             child: AppButton(
               buttonText: 'Get Started',
-              onPressed: () {},
+              onPressed: () => context.pushNamed(Routes.loginScreen),
             ),
           ),
         ],

@@ -18,10 +18,11 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               const WelcomeBackText(),
-              verticalSpace(20.0),
+              verticalSpace(40.0),
               const LoginForm(),
-              verticalSpace(20.0),
+              verticalSpace(40.0),
               const TermsAndConditionsText(),
+              verticalSpace(25.0),
               const RegisterText(),
             ],
           ),

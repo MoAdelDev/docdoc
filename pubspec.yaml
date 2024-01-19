@@ -58,6 +58,7 @@ dependencies:
   #for resonsive sized for all screen sizes
   flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.9
+  build_runner: ^2.4.8
 
 dev_dependencies:
   flutter_test:

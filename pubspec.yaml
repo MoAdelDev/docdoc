@@ -55,6 +55,9 @@ dependencies:
   shared_preferences: ^2.2.2
   #for splash screen
   flutter_native_splash: ^2.3.9
+  #for resonsive sized for all screen sizes
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:

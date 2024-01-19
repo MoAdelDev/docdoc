@@ -50,7 +50,7 @@ class _LoginFormState extends State<LoginForm> {
             },
             errorMsg: 'Please enter your password',
           ),
-          verticalSpace(10),
+          verticalSpace(20),
           AppButton(
             buttonText: 'Login',
             onPressed: () {

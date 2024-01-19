@@ -1,5 +1,5 @@
 import 'package:docdoc/core/helpers/spacing.dart';
-import 'package:docdoc/features/login/ui/widgets/already_have_accont_text.dart';
+import 'package:docdoc/features/login/ui/widgets/register_question_text.dart';
 import 'package:docdoc/features/login/ui/widgets/login_form.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:docdoc/features/login/ui/widgets/welcome_back_text.dart';
@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               const LoginForm(),
               verticalSpace(20.0),
               const TermsAndConditionsText(),
-              const AlreadyHaveAnAccountText(),
+              const RegisterText(),
             ],
           ),
         ),

@@ -3,8 +3,8 @@ import 'package:docdoc/core/style/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class WelcomeBackText extends StatelessWidget {
-  const WelcomeBackText({super.key});
+class CreateAccountText extends StatelessWidget {
+  const CreateAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class WelcomeBackText extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Welcome Back',
+            'Create Account',
             style: AppText.text24PrimaryBold,
           ),
           verticalSpace(5.0),
           Text(
-            "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
+            "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",
             style: AppText.text14GrayRegular,
           )
         ],

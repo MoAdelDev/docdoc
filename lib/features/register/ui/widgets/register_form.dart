@@ -1,7 +1,10 @@
+import 'package:docdoc/core/helpers/app_regex.dart';
 import 'package:docdoc/core/helpers/spacing.dart';
-import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:docdoc/core/widgets/app_text_form_field.dart';
+import 'package:docdoc/features/login/ui/widgets/password_validations.dart';
+import 'package:docdoc/features/register/logic/cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -11,48 +14,81 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-
   bool isPasswordHidden = false;
+  bool hasLowerCase = false;
+  bool hasSpecialCharacter = false;
+  bool hasUpperCase = false;
+  bool hasNumber = false;
+  bool hasMinLength = false;
+  late TextEditingController passwordController;
+  @override
+  void initState() {
+    super.initState();
+    passwordController = context.read<RegisterCubit>().passwordController;
+    passwordController.addListener(() {
+      hasLowerCase = AppRegex.hasLowerCase(passwordController.text);
+      hasSpecialCharacter =
+          AppRegex.hasSpecialCharacter(passwordController.text);
+      hasUpperCase = AppRegex.hasUpperCase(passwordController.text);
+      hasNumber = AppRegex.hasNumber(passwordController.text);
+      hasMinLength = AppRegex.hasMinLength(passwordController.text);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      key: context.read<RegisterCubit>().formKey,
       child: Column(
         children: [
           AppTextFormFiled(
-            controller: _usernameController,
+            controller: context.read<RegisterCubit>().nameController,
             hintText: 'Username',
             keyboardType: TextInputType.name,
             textInputAction: TextInputAction.next,
             onFieldSubmitted: (p0) => FocusScope.of(context).requestFocus(),
-            validator: (value) {},
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter a valid username';
+              }
+              return null;
+            },
           ),
           verticalSpace(20),
           AppTextFormFiled(
-            controller: _emailController,
+            controller: context.read<RegisterCubit>().emailController,
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
             onFieldSubmitted: (p0) => FocusScope.of(context).requestFocus(),
-            validator: (value) {},
+            validator: (value) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isEmailValid(value)) {
+                return 'Please enter a valid email';
+              }
+              return null;
+            },
           ),
           verticalSpace(20),
           AppTextFormFiled(
-            controller: _phoneController,
+            controller: context.read<RegisterCubit>().phoneController,
             hintText: 'Phone',
             keyboardType: TextInputType.phone,
             textInputAction: TextInputAction.next,
             onFieldSubmitted: (p0) => FocusScope.of(context).requestFocus(),
-            validator: (value) {},
+            validator: (value) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isPhoneNumberValid(value)) {
+                return 'Please enter a valid phone number';
+              }
+              return null;
+            },
           ),
           verticalSpace(20),
           AppTextFormFiled(
-            controller: _passwordController,
+            controller: context.read<RegisterCubit>().passwordController,
             hintText: 'Password',
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.next,
@@ -65,15 +101,31 @@ class _RegisterFormState extends State<RegisterForm> {
                 isPasswordHidden = !isPasswordHidden;
               });
             },
-            validator: (value) {},
+            validator: (value) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isPasswordValid(value)) {
+                return 'Please enter a valid password';
+              }
+              return null;
+            },
           ),
           verticalSpace(20),
-          AppButton(
-            buttonText: 'Create Account',
-            onPressed: () {},
+          PasswordValidations(
+            hasLowerCase: hasLowerCase,
+            hasUpperCase: hasUpperCase,
+            hasSpecialCharacter: hasSpecialCharacter,
+            hasNumber: hasNumber,
+            hasMinLength: hasMinLength,
           ),
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    passwordController.dispose();
   }
 }

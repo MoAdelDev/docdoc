@@ -12,6 +12,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   void emitRegisterStates() async {
     emit(const RegisterState.registerLoading());

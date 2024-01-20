@@ -13,21 +13,23 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 32.0.w),
-          child: Column(
-            children: [
-              const WelcomeBackText(),
-              verticalSpace(40.0),
-              const LoginEmailAndPassword(),
-              verticalSpace(20.0),
-              const LoginButtonAndListener(),
-              verticalSpace(40.0),
-              const TermsAndConditionsText(),
-              verticalSpace(20.0),
-              const RegisterText(),
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32.0.w),
+            child: Column(
+              children: [
+                const WelcomeBackText(),
+                verticalSpace(40.0),
+                const LoginEmailAndPassword(),
+                verticalSpace(20.0),
+                const LoginButtonAndListener(),
+                verticalSpace(40.0),
+                const TermsAndConditionsText(),
+                verticalSpace(20.0),
+                const RegisterQuestionText(),
+              ],
+            ),
           ),
         ),
       ),

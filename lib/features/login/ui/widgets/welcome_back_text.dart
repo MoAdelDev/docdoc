@@ -9,8 +9,7 @@ class WelcomeBackText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:
-          EdgeInsets.only(top: 90.h - MediaQuery.of(context).viewPadding.top.h),
+      margin: EdgeInsets.only(top: 20.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

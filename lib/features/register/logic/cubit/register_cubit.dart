@@ -22,6 +22,8 @@ class RegisterCubit extends Cubit<RegisterState> {
         emailController.text,
         phoneController.text,
         passwordController.text,
+        passwordController.text,
+        '0',
       ),
     );
     response.when(

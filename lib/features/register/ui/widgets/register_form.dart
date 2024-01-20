@@ -14,7 +14,7 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
-  bool isPasswordHidden = false;
+  bool isPasswordHidden = true;
   bool hasLowerCase = false;
   bool hasSpecialCharacter = false;
   bool hasUpperCase = false;

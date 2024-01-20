@@ -1,5 +1,4 @@
 import 'package:docdoc/core/helpers/spacing.dart';
-import 'package:docdoc/features/login/ui/widgets/password_validations.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:docdoc/features/register/ui/widgets/create_account_button.dart';
 import 'package:docdoc/features/register/ui/widgets/create_account_text.dart';

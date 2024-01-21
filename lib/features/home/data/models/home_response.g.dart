@@ -27,7 +27,7 @@ HomeData _$HomeDataFromJson(Map<String, dynamic> json) => HomeData(
       json['id'] as int,
       json['name'] as String,
       (json['doctors'] as List<dynamic>)
-          .map((e) => DashboardDoctorData.fromJson(e as Map<String, dynamic>))
+          .map((e) => HomeDoctorData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -37,8 +37,8 @@ Map<String, dynamic> _$HomeDataToJson(HomeData instance) => <String, dynamic>{
       'doctors': instance.doctors,
     };
 
-DashboardDoctorData _$DashboardDoctorDataFromJson(Map<String, dynamic> json) =>
-    DashboardDoctorData(
+HomeDoctorData _$HomeDoctorDataFromJson(Map<String, dynamic> json) =>
+    HomeDoctorData(
       json['id'] as int,
       json['name'] as String,
       json['email'] as String,
@@ -56,8 +56,7 @@ DashboardDoctorData _$DashboardDoctorDataFromJson(Map<String, dynamic> json) =>
       CityModel.fromJson(json['city'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$DashboardDoctorDataToJson(
-        DashboardDoctorData instance) =>
+Map<String, dynamic> _$HomeDoctorDataToJson(HomeDoctorData instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

@@ -5,6 +5,7 @@ part 'city_model.g.dart';
 class CityModel {
   final int id;
   final String name;
+  @JsonKey(name: 'governrate')
   final GovernrateModel governrateModel;
 
   CityModel(this.id, this.name, this.governrateModel);

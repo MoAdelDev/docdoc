@@ -19,7 +19,7 @@ class HomeResponse {
 class HomeData {
   final int id;
   final String name;
-  final List<DashboardDoctorData> doctors;
+  final List<HomeDoctorData> doctors;
 
   HomeData(this.id, this.name, this.doctors);
   factory HomeData.fromJson(Map<String, dynamic> json) =>
@@ -27,7 +27,7 @@ class HomeData {
 }
 
 @JsonSerializable()
-class DashboardDoctorData {
+class HomeDoctorData {
   final int id;
   final String name;
   final String email;
@@ -48,7 +48,7 @@ class DashboardDoctorData {
   @JsonKey(name: 'city')
   final CityModel cityModel;
 
-  DashboardDoctorData(
+  HomeDoctorData(
     this.id,
     this.name,
     this.email,
@@ -65,6 +65,6 @@ class DashboardDoctorData {
     this.cityModel,
   );
 
-  factory DashboardDoctorData.fromJson(Map<String, dynamic> json) =>
+  factory HomeDoctorData.fromJson(Map<String, dynamic> json) =>
       _$HomeDoctorDataFromJson(json);
 }

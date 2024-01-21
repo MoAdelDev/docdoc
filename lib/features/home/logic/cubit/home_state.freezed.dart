@@ -20,7 +20,7 @@ mixin _$HomeState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() dashboardLoading,
-    required TResult Function(T data) dashboardSuccess,
+    required TResult Function(HomeResponse data) dashboardSuccess,
     required TResult Function(String error) dashboardError,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$HomeState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? dashboardLoading,
-    TResult? Function(T data)? dashboardSuccess,
+    TResult? Function(HomeResponse data)? dashboardSuccess,
     TResult? Function(String error)? dashboardError,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$HomeState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? dashboardLoading,
-    TResult Function(T data)? dashboardSuccess,
+    TResult Function(HomeResponse data)? dashboardSuccess,
     TResult Function(String error)? dashboardError,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() dashboardLoading,
-    required TResult Function(T data) dashboardSuccess,
+    required TResult Function(HomeResponse data) dashboardSuccess,
     required TResult Function(String error) dashboardError,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? dashboardLoading,
-    TResult? Function(T data)? dashboardSuccess,
+    TResult? Function(HomeResponse data)? dashboardSuccess,
     TResult? Function(String error)? dashboardError,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? dashboardLoading,
-    TResult Function(T data)? dashboardSuccess,
+    TResult Function(HomeResponse data)? dashboardSuccess,
     TResult Function(String error)? dashboardError,
     required TResult orElse(),
   }) {
@@ -241,7 +241,7 @@ class _$DashboardLoadingImpl<T> implements DashboardLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() dashboardLoading,
-    required TResult Function(T data) dashboardSuccess,
+    required TResult Function(HomeResponse data) dashboardSuccess,
     required TResult Function(String error) dashboardError,
   }) {
     return dashboardLoading();
@@ -252,7 +252,7 @@ class _$DashboardLoadingImpl<T> implements DashboardLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? dashboardLoading,
-    TResult? Function(T data)? dashboardSuccess,
+    TResult? Function(HomeResponse data)? dashboardSuccess,
     TResult? Function(String error)? dashboardError,
   }) {
     return dashboardLoading?.call();
@@ -263,7 +263,7 @@ class _$DashboardLoadingImpl<T> implements DashboardLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? dashboardLoading,
-    TResult Function(T data)? dashboardSuccess,
+    TResult Function(HomeResponse data)? dashboardSuccess,
     TResult Function(String error)? dashboardError,
     required TResult orElse(),
   }) {
@@ -321,7 +321,7 @@ abstract class _$$DashboardSuccessImplCopyWith<T, $Res> {
           $Res Function(_$DashboardSuccessImpl<T>) then) =
       __$$DashboardSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({HomeResponse data});
 }
 
 /// @nodoc
@@ -335,13 +335,13 @@ class __$$DashboardSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$DashboardSuccessImpl<T>(
-      freezed == data
+      null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as T,
+              as HomeResponse,
     ));
   }
 }
@@ -352,7 +352,7 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
   const _$DashboardSuccessImpl(this.data);
 
   @override
-  final T data;
+  final HomeResponse data;
 
   @override
   String toString() {
@@ -364,12 +364,11 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DashboardSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.data, data) || other.data == data));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, data);
 
   @JsonKey(ignore: true)
   @override
@@ -383,7 +382,7 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() dashboardLoading,
-    required TResult Function(T data) dashboardSuccess,
+    required TResult Function(HomeResponse data) dashboardSuccess,
     required TResult Function(String error) dashboardError,
   }) {
     return dashboardSuccess(data);
@@ -394,7 +393,7 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? dashboardLoading,
-    TResult? Function(T data)? dashboardSuccess,
+    TResult? Function(HomeResponse data)? dashboardSuccess,
     TResult? Function(String error)? dashboardError,
   }) {
     return dashboardSuccess?.call(data);
@@ -405,7 +404,7 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? dashboardLoading,
-    TResult Function(T data)? dashboardSuccess,
+    TResult Function(HomeResponse data)? dashboardSuccess,
     TResult Function(String error)? dashboardError,
     required TResult orElse(),
   }) {
@@ -454,9 +453,10 @@ class _$DashboardSuccessImpl<T> implements DashboardSuccess<T> {
 }
 
 abstract class DashboardSuccess<T> implements HomeState<T> {
-  const factory DashboardSuccess(final T data) = _$DashboardSuccessImpl<T>;
+  const factory DashboardSuccess(final HomeResponse data) =
+      _$DashboardSuccessImpl<T>;
 
-  T get data;
+  HomeResponse get data;
   @JsonKey(ignore: true)
   _$$DashboardSuccessImplCopyWith<T, _$DashboardSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -529,7 +529,7 @@ class _$DashboardErrorImpl<T> implements DashboardError<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() dashboardLoading,
-    required TResult Function(T data) dashboardSuccess,
+    required TResult Function(HomeResponse data) dashboardSuccess,
     required TResult Function(String error) dashboardError,
   }) {
     return dashboardError(error);
@@ -540,7 +540,7 @@ class _$DashboardErrorImpl<T> implements DashboardError<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? dashboardLoading,
-    TResult? Function(T data)? dashboardSuccess,
+    TResult? Function(HomeResponse data)? dashboardSuccess,
     TResult? Function(String error)? dashboardError,
   }) {
     return dashboardError?.call(error);
@@ -551,7 +551,7 @@ class _$DashboardErrorImpl<T> implements DashboardError<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? dashboardLoading,
-    TResult Function(T data)? dashboardSuccess,
+    TResult Function(HomeResponse data)? dashboardSuccess,
     TResult Function(String error)? dashboardError,
     required TResult orElse(),
   }) {

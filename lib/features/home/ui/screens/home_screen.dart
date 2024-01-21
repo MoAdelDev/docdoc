@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+      body: SafeArea(child: screens[currentIndex]),
       bottomNavigationBar: Container(
         margin: EdgeInsets.symmetric(
           horizontal: 10.0.w,

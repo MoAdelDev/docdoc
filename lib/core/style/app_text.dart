@@ -27,6 +27,21 @@ class AppText {
         fontWeight: FontWeightHelper.bold,
         color: AppColor.darkBlue,
       );
+  static TextStyle get text18WhiteMedium => TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeightHelper.medium,
+        color: Colors.white,
+      );
+  static TextStyle get text18BlackBold => TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeightHelper.bold,
+        color: AppColor.black,
+      );
+  static TextStyle get text11GrayRegular => TextStyle(
+        fontSize: 11.sp,
+        fontWeight: FontWeightHelper.regular,
+        color: AppColor.gray,
+      );
   static TextStyle get text24BlackBold => TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeightHelper.bold,

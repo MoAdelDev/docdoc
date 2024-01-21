@@ -14,7 +14,7 @@ class DashboardBanner extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 18.w),
           width: double.infinity,
-          height: context.height * 0.18.h,
+          height: 160.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24.0.r),
             color: Theme.of(context).primaryColor,
@@ -22,9 +22,12 @@ class DashboardBanner extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Book and\nschedule with\nthe doctors',
-                style: AppText.text18WhiteMedium,
+              SizedBox(
+                height: 80.h,
+                child: Text(
+                  'Book and\nschedule with\nthe doctors',
+                  style: AppText.text18WhiteMedium,
+                ),
               ),
               const Spacer(),
               Container(
@@ -43,13 +46,13 @@ class DashboardBanner extends StatelessWidget {
                     style: AppText.text12PrimaryRegular,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
         Image.asset(
           'assets/images/female.png',
-          height: context.height * 0.22.h,
+          height: 160.0.h + 30.h,
           fit: BoxFit.cover,
         ),
       ],

@@ -1,5 +1,4 @@
 import 'package:docdoc/core/helpers/spacing.dart';
-import 'package:docdoc/core/style/app_color.dart';
 import 'package:docdoc/core/style/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

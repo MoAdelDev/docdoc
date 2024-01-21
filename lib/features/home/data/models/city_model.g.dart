@@ -1,0 +1,31 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'city_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CityModel _$CityModelFromJson(Map<String, dynamic> json) => CityModel(
+      json['id'] as int,
+      json['name'] as String,
+      GovernrateModel.fromJson(json['governrateModel'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$CityModelToJson(CityModel instance) => <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'governrateModel': instance.governrateModel,
+    };
+
+GovernrateModel _$GovernrateModelFromJson(Map<String, dynamic> json) =>
+    GovernrateModel(
+      json['id'] as int,
+      json['name'] as String,
+    );
+
+Map<String, dynamic> _$GovernrateModelToJson(GovernrateModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+    };

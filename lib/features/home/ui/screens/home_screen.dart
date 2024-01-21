@@ -1,6 +1,6 @@
 import 'package:docdoc/core/style/app_color.dart';
 import 'package:docdoc/features/calendar/calendar_screen.dart';
-import 'package:docdoc/features/dashboard/dashboard_screen.dart';
+import 'package:docdoc/features/dashboard/ui/screens/dashboard_screen.dart';
 import 'package:docdoc/features/home/ui/widgets/navigation_destination.dart';
 import 'package:docdoc/features/messages/messages_screen.dart';
 import 'package:docdoc/features/profile/profile_screen.dart';

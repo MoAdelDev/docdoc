@@ -11,7 +11,7 @@ class HomeRepo {
   Future<ApiResult<HomeResponse>> getHomeDataData() async {
     try {
       const String token =
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzA1ODM3NDIwLCJleHAiOjE3MDU4NDEwMjAsIm5iZiI6MTcwNTgzNzQyMCwianRpIjoiWTV4ZDQ5RWFqUEVFQUdXYyIsInN1YiI6IjQ0NiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xw7ESW6VmI7nnqBqGlTidM9WEuzjPe6JRzdoRS-cMuk';
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzA1ODQ0OTc5LCJleHAiOjE3MDU4NDg1NzksIm5iZiI6MTcwNTg0NDk3OSwianRpIjoiNXp4YVBDNDc0dFFPSmdPTyIsInN1YiI6IjQ0NiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wHkV78BwNPxZL8iA-u4lsH7eCKmxHUN3JJrMWdWR58A';
 
       final result = await _apiService.getHomeData('Bearer $token');
       return ApiResult.success(result);

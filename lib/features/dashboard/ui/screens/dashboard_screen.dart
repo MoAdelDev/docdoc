@@ -2,6 +2,7 @@ import 'package:docdoc/core/helpers/enums.dart';
 import 'package:docdoc/core/helpers/extensions.dart';
 import 'package:docdoc/features/dashboard/ui/widgets/dashboard_app_bar.dart';
 import 'package:docdoc/features/dashboard/ui/widgets/dashboard_banner.dart';
+import 'package:docdoc/features/dashboard/ui/widgets/dashboard_title.dart';
 import 'package:docdoc/features/home/logic/cubit/home_cubit.dart';
 import 'package:docdoc/features/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
@@ -30,10 +31,11 @@ class DashboardScreen extends StatelessWidget {
               horizontal: 12.w,
               vertical: 16.0.h,
             ),
-            child: const Column(
+            child: Column(
               children: [
-                DashboardAppBar(),
-                DashboardBanner(),
+                const DashboardAppBar(),
+                const DashboardBanner(),
+                DashboardTitle(onPressed: () {}, title: 'Doctor Speciality')
               ],
             ),
           ),

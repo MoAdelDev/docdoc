@@ -1,3 +1,4 @@
+import 'package:docdoc/core/helpers/cache_helper.dart';
 import 'package:docdoc/core/netwroking/api_error_handler.dart';
 import 'package:docdoc/core/netwroking/api_result.dart';
 import 'package:docdoc/core/netwroking/api_service.dart';
@@ -13,6 +14,7 @@ class LoginRepo {
       LoginRequestBody loginRequestBody) async {
     try {
       final result = await _apiService.login(loginRequestBody);
+      CacheHelper.saveString(key: 'token', value: result.userData?.token ?? '');
       return ApiResult.success(result);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

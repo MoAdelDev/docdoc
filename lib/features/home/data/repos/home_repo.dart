@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:docdoc/core/helpers/cache_helper.dart';
 import 'package:docdoc/core/netwroking/api_error_handler.dart';
 import 'package:docdoc/core/netwroking/api_result.dart';
 import 'package:docdoc/core/netwroking/api_service.dart';
@@ -10,13 +13,11 @@ class HomeRepo {
 
   Future<ApiResult<HomeResponse>> getHomeDataData() async {
     try {
-      const String token =
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzA1ODQ0OTc5LCJleHAiOjE3MDU4NDg1NzksIm5iZiI6MTcwNTg0NDk3OSwianRpIjoiNXp4YVBDNDc0dFFPSmdPTyIsInN1YiI6IjQ0NiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wHkV78BwNPxZL8iA-u4lsH7eCKmxHUN3JJrMWdWR58A';
-
+      final String token = CacheHelper.getString(key: 'token') ?? '';
       final result = await _apiService.getHomeData('Bearer $token');
       return ApiResult.success(result);
     } catch (e) {
-      print('Error : ${e.toString()}');
+      log(e.toString());
       return ApiResult.failure(ErrorHandler.handle(e));
     }
   }

@@ -16,7 +16,7 @@ class DocDocApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute: Routes.onBoardingScreen,
         onGenerateRoute: (settings) => appRouter.generateRouter(settings),
         theme: AppTheme.lightTheme,
       ),

@@ -16,7 +16,6 @@ class HomeRepo {
       final result = await _apiService.getHomeData('Bearer $token');
       return ApiResult.success(result);
     } catch (e) {
-      print('Error : ${e.toString()}');
       return ApiResult.failure(ErrorHandler.handle(e));
     }
   }

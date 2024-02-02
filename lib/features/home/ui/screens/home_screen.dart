@@ -34,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: Container(
+        height: 60.0.h,
         margin: EdgeInsets.symmetric(
           horizontal: 10.0.w,
           vertical: 10.0.h,
@@ -53,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: NavigationBar(
           elevation: 0,
-          height: 60.h,
           animationDuration: const Duration(seconds: 4),
           backgroundColor: Colors.transparent,
           destinations: items
